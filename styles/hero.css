@@ -1,5 +1,5 @@
 .hero {
-  background: /* Linear gradient for the black overlay */ linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Your background image URL */ url(/_next/static/media/bg-lg.356f75e4.png);
+  background: /* Linear gradient for the black overlay */ linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Your background image URL */ url('../public/bg-lg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
