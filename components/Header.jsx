@@ -4,9 +4,6 @@ import Link from 'next/link'
 
 
 const Header = () => {
-  useEffect(() => {
-    console.log(process.env.NEXT_PUBLIC_MONGO)
-  },[])
 
   return (
     <header className="header">

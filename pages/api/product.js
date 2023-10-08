@@ -3,7 +3,7 @@ const Product = require("../../models/Products");
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
-    mongoose.connect(process.env.NEXT_PUBLIC_MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(process.env.NEXT_PUBLIC_MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
 
     try {
       const products = await Product.find();
