@@ -1,0 +1,10 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+}
+
+h2 {
+  margin-bottom: 32px;
+}

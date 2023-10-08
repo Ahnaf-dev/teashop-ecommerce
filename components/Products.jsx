@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Product from "./Product";
 
 const Products = ({products}) => {
 
-  console.log(products)
-  
   return (
-    <section>
+    <section id="products" className="container">
+      <h2>Featured Products</h2>
+      <div className="products">
       {products.map((prod) => (
-        <h1>{prod.name}</h1>
+        <Product key={prod._id} {...prod}/>
       ))}
+
+      </div>
+     
     </section>
   )
 }

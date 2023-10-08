@@ -3,10 +3,12 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Products from "../components/Products";
 import {getProducts} from "../utils/api";
+import axios from "axios";
 
 
 
 export default function Home({products, error}) {
+
 
   return (
     <>
@@ -19,20 +21,18 @@ export default function Home({products, error}) {
 
 export async function getServerSideProps(context) {
   try {
-    // Fetch data from an API or a database
-    const data = await getProducts();
+    const response = await getProducts();
 
-    // Return the data as props
     return {
       props: {
-        products: data
+        products: response
       },
     };
   } catch (error) {
     // Handle errors and pass them as props
     return {
       props: {
-        error: 'An error occurred while fetching data.',
+        error: `An error occurred while fetching data., ${error}`,
       },
     };
   }

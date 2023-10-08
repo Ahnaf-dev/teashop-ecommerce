@@ -2,6 +2,8 @@
 @import "./header.css";
 @import "./button.css";
 @import "./hero.css";
+@import "./product.css";
+@import "./products.css";
 
 * {
   box-sizing: border-box;
@@ -27,10 +29,16 @@ h1,h2,h3,h4,h5,h6 {
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0px 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 a {
   text-decoration: none;
   color: unset;
+}
+
+section {
+  padding-top: 24px;
+  padding-bottom: 36px;
 }
