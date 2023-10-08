@@ -1,0 +1,34 @@
+.hero {
+  background: /* Linear gradient for the black overlay */ linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Your background image URL */ url(/_next/static/media/bg-lg.356f75e4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60rem;
+  position: relative;
+  top: -5.2rem;
+  z-index: 1;
+  padding-top: 23rem;
+
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: white;
+
+}
+
+.hero p {
+  max-width: 800px;
+}
+/* .hero::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+} */

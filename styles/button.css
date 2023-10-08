@@ -1,0 +1,19 @@
+.btn {
+  background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.btn--white {
+  background-color: white;
+  color: black;
+  border: none;
+  transition: all 0.3s ease-in;
+}
+
+.btn--white:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
