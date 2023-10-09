@@ -4,6 +4,9 @@
 @import "./hero.css";
 @import "./product.css";
 @import "./products.css";
+@import "./dialog.css";
+@import "./cartItem.css";
+@import "./cartContent.css";
 
 * {
   box-sizing: border-box;

@@ -17,3 +17,15 @@
   border: 1px solid white;
   color: white;
 }
+.btn--black {
+  background-color: black;
+  color: white;
+  border: none;
+  transition: all 0.3s ease-in;
+}
+
+.btn--black:hover {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+}

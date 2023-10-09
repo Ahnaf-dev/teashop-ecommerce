@@ -6,11 +6,11 @@
   height: 350px;
 }
 
-.product h3 {
+.product h3, .product p {
   margin-bottom: 8px;
 }
 
-.product h3, .product p {
+.product h3, .product p, .product button {
   margin-left: 16px;
 }
 

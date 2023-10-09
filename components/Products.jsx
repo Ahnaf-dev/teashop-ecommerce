@@ -3,6 +3,14 @@ import Product from "./Product";
 
 const Products = ({products}) => {
 
+  if (!products) {
+    return (
+      <section id="products" className="container">
+        <h2>Inactive Database Loading</h2>
+      </section>
+    ) 
+  }
+
   return (
     <section id="products" className="container">
       <h2>Featured Products</h2>
