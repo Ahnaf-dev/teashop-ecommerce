@@ -5,6 +5,14 @@
 
 }
 
+@media screen and (max-width: 600px) {
+  .products {
+    flex-direction: column;
+    justify-content: start;
+    gap: 24px;
+  }
+}
+
 #products h2 {
   margin-bottom: 32px;
 }

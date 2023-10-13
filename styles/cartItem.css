@@ -36,3 +36,15 @@
   font-size: 20px;
   font-weight: 500;
 }
+
+@media screen and (max-width: 600px) {
+  .cart-item__quantity {
+    margin-left: 40px;
+   
+  }
+
+  .cart-item img {
+    width: 75px;
+  }
+  
+}
