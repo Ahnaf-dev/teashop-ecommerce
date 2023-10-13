@@ -13,3 +13,13 @@ export const getProducts = async () => {
     throw error;
   }
 };
+
+
+export const checkoutCart = async(lineItems) => {
+  try {
+    const {data} = await api.post('/checkout', {lineItems})
+    return data;
+  } catch(error) {
+    throw error;
+  }
+}

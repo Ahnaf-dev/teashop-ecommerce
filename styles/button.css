@@ -29,3 +29,19 @@
   border: 1px solid black;
   color: black;
 }
+.btn--checkout {
+  background-color: #3EBFA4;
+  color: white;
+  border: none;
+  transition: all 0.3s ease-in;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 1px solid transparent;
+}
+
+.btn--checkout:hover {
+  background-color: transparent;
+  border: 1px solid #3EBFA4;
+  color: #3EBFA4;
+}

@@ -1,5 +1,6 @@
+import { loadStripe } from '@stripe/stripe-js';
 import React, { createContext, useContext, useState } from 'react';
-
+import { checkoutCart } from '../utils/api';
 const CartContext = createContext();
 
 export function useCart() {
@@ -8,7 +9,7 @@ export function useCart() {
 
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
-
+  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY)
   // Add an item to the cart
   const addToCart = (item) => {
     setCartItems([...cartItems, {...item, price: item.unitPrice}]);
@@ -30,14 +31,18 @@ export function CartProvider({ children }) {
     return cartItems.length;
   };
 
+  const getTotalPrice = () => {
+      return cartItems.reduce((total, item) => total + item.price, 0);
+  }
+
   const handleQuantityIncrease = (itemId) => {
+   
     setCartItems((state) => {
 
       return state.map((item) => {
           if (item._id === itemId) {
             item.quantity = item.quantity + 1;
-            item.price = item.quantity * item.unitPrice;
-            console.log(item.quantity)
+            item.price = +(item.quantity * item.unitPrice).toFixed(2);
           }
           return item;
         
@@ -47,9 +52,57 @@ export function CartProvider({ children }) {
 
   }
 
+  const handleQuantityDecrease = (itemId) => {
+    const item = findItem(itemId)
+
+    if (item && item.quantity < 2) {
+      removeFromCart(itemId)
+    } else {
+      setCartItems((state) => {
+
+        return state.map((item) => {
+            if (item._id === itemId) {
+                item.quantity = item.quantity - 1;
+                item.price = +(item.quantity * item.unitPrice).toFixed(2);
+              
+            }
+            return item;
+          
+        })
+  
+      })
+
+    }
+   
+
+  }
+
   const findItem = (itemId) => {
     return cartItems.find((item) => item._id === itemId);
+  }
 
+  const handleCheckout = async () => {
+    const lineItems = cartItems.map((item) => {
+      return {
+        price_data: {
+          currency: 'cad',
+          product_data: {
+            name: item.name
+          },
+          unit_amount: Math.round(item.price.toFixed(2)*100)
+        },
+        quantity: item.quantity
+      }
+    })
+
+    try {
+
+      const data = await checkoutCart(lineItems);
+      const stripe = await stripePromise;
+      await stripe.redirectToCheckout({sessionId: data.id})
+    } catch(error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -60,7 +113,10 @@ export function CartProvider({ children }) {
         removeFromCart,
         getTotalItems,
         handleAddedToCart,
-        handleQuantityIncrease
+        handleQuantityIncrease,
+        handleQuantityDecrease,
+        getTotalPrice,
+        handleCheckout
       }}
     >
       {children}

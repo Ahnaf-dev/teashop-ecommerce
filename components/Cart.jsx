@@ -9,12 +9,11 @@ const Cart = () => {
 
 
   const handleClose = () => {
-    console.log(getTotalItems)
     setIsOpen(false);
   }
   return (
     <>
-    <div onClick={() => setIsOpen(true)} className="cart-icon" style={{ position: 'relative' }}>
+    <div onClick={() => setIsOpen(true)} className="cart-icon" style={{ position: 'relative', cursor: "pointer" }}>
     <FaShoppingCart size={32}  />
       <div
         style={{

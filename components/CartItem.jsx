@@ -2,13 +2,13 @@ import React from 'react'
 import { useCart } from '../context/CartContext'
 
 const CartItem = ({_id, image, name, unitPrice, price, quantity}) => {
-  const {handleQuantityIncrease} = useCart()
+  const {handleQuantityIncrease, handleQuantityDecrease  } = useCart()
   return (
     <div className="cart-item">
       <img src={image} />
       <p className="cart-item--name">{name}</p>
       <div className="cart-item__quantity">
-        <span>-</span>
+        <span onClick={() => handleQuantityDecrease(_id)}>-</span>
         <p>
         {quantity}
 
