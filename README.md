@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JobFishApp
+I developed an ecommerce teashop project using Next.js, server-side rendering, context API, custom hooks, composition techniques, and integrated Stripe for seamless payment processing. This project showcases my proficiency in building modern web applications, incorporating cutting-edge technologies, and delivering a delightful user experience.
 
-## Getting Started
+[Live Link](https://teashop-ecommerce.vercel.app/)
 
-First, run the development server:
+## Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Frontend
+* **Languages**: HTML5, CSS3, JavaScript ES6
+* **Frameworks**: React, NextJS, Stripe
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend
+* **Frameworks**: NextJS API
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Technical Features
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Ecommerce Teashop Development:** Successfully designed and developed a fully functional ecommerce teashop website from the ground up, offering a wide range of premium tea products for online purchase.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Next.js Implementation:** Leveraged Next.js, a popular React framework, to enable server-side rendering (SSR) for improved performance and SEO optimization, resulting in faster page loads and better search engine rankings.
 
-## Learn More
+- **Context API Integration:** Utilized React's Context API to manage state and provide a seamless shopping experience by maintaining consistent data across the application.
 
-To learn more about Next.js, take a look at the following resources:
+- **Custom Hooks:** Implemented custom hooks to encapsulate and reuse complex logic, enhancing code modularity and maintainability, and enabling a more efficient development process.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Composition Technique:** Applied composition techniques to create reusable and composable UI components, promoting a consistent design language and faster development cycles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Stripe Payment Integration:** Seamlessly integrated Stripe, a leading payment processing platform, to provide a secure and user-friendly payment experience, enabling customers to make purchases with confidence.
 
-## Deploy on Vercel
+- **Responsive Design:** Ensured that the teashop is accessible and functional across a variety of devices and screen sizes through responsive web design.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-**Deployment and Hosting:** Deployed the project to Vercel and configured sensitive information through environment variables.
