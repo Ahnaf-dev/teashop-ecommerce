@@ -1,4 +1,4 @@
-# JobFishApp
+# Tea Shop Ecommerce
 I developed an ecommerce teashop project using Next.js, server-side rendering, context API, custom hooks, composition techniques, and integrated Stripe for seamless payment processing. This project showcases my proficiency in building modern web applications, incorporating cutting-edge technologies, and delivering a delightful user experience.
 
 [Live Link](https://teashop-ecommerce.vercel.app/)
