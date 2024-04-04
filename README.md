@@ -3,6 +3,8 @@ I developed an ecommerce teashop project using Next.js, server-side rendering, c
 
 [Live Link](https://teashop-ecommerce.vercel.app/)
 
+**Note:** Use a test card https://docs.stripe.com/testing as the checkout is in test mode.
+
 ## Technologies
 
 ### Frontend
@@ -32,4 +34,3 @@ I developed an ecommerce teashop project using Next.js, server-side rendering, c
 
 - **Deployment and Hosting:** Deployed the project to Vercel and configured sensitive information through environment variables.
 
-*Note:* Use a test card https://docs.stripe.com/testing as the checkout is in test mode.
