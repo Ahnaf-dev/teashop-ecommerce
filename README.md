@@ -31,3 +31,5 @@ I developed an ecommerce teashop project using Next.js, server-side rendering, c
 - **Responsive Design:** Ensured that the site is accessible and functional across a variety of devices and screen sizes through responsive web design.
 
 - **Deployment and Hosting:** Deployed the project to Vercel and configured sensitive information through environment variables.
+
+*Note:* Use a test card https://docs.stripe.com/testing as the checkout is in test mode.
